@@ -1,1 +1,3 @@
-from .heatmap import heatmap
+from .heatmap import (heatmap)
+
+__all__ = ["heatmap"]

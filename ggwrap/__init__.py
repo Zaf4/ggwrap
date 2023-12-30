@@ -5,4 +5,4 @@ from .core import (
     heatmap
 )
 
-__all__ = ["arr2df_melted"]
+__all__ = ["arr2df_melted","heatmap"]
