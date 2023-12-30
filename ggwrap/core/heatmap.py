@@ -1,11 +1,12 @@
 import numpy as np
-import polars as pl
 import lets_plot
 from lets_plot import *
-from ..ops import arr2df_melted
 LetsPlot.setup_html()
 
+#relative imports
+from ..ops import arr2df_melted
 
+# function : heatmap
 def heatmap(arr:np.ndarray,value_name:str="value")->lets_plot.plot.core.PlotSpec:
     """Heatmap of the given 2D array.
 
@@ -35,15 +36,5 @@ def heatmap(arr:np.ndarray,value_name:str="value")->lets_plot.plot.core.PlotSpec
     )
     return ax
 
-def test_heatmap(**kwargs)->lets_plot.plot.core.PlotSpec:
-    arr1 = np.random.randn(40)
-    dist_mtx = np.zeros((40, 40))
-    for i,a in enumerate(arr1):
-        dist_mtx[i] = np.abs(arr1 - a)
-    
-    return heatmap(dist_mtx,**kwargs)
-
-
 if __name__ == "__main__":
-    ax = test_heatmap()
-    ax.to_html("heatmap.html")
+    pass
