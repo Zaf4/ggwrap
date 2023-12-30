@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ggwrap"
+version = "0.1.0"
+description = "Wrappers around lets-plot"
+authors = ["Zafer Kosar"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+polars = "^0.20.2"
+lets-plot = "^4.0.0"
+numpy = "^1.26.2"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
